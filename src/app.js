@@ -13,11 +13,6 @@ const app = express();
 //Cors
 app.use(cors());
 
-//Conecta ao BD.
-mongoose.connect('mongodb://127.0.0.1:27017/biblioteca', { useNewUrlParser: true, useUnifiedTopology: true }, () =>
-    console.log('Banco conectado!!')
-);
-
 //Session
 app.use(session({
     secret: 'ssshhhhh',
@@ -71,6 +66,12 @@ try {
 } catch (e) {
     console.log(e);
 }
+
+console.log(data['CONN']);
+//Conecta ao BD.
+mongoose.connect(data['CONN'], { useNewUrlParser: true, useUnifiedTopology: true }, () =>
+    console.log('Banco conectado!!')
+);
 
 console.log('Iniciando aplicação porta: ' + (data['PORT']));
 app.listen(data['PORT']);

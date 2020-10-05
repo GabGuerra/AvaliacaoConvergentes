@@ -2,3 +2,4 @@
 title: "Avaliação Bimestral - Biblioteca (dev)"  
 domain: "localhost:3333/dev/"
 PORT: 3333
+CONN: "mongodb://127.0.0.1:27017/biblioteca"
