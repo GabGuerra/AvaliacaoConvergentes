@@ -41,17 +41,19 @@ const yaml = require('js-yaml');
 const fs = require('fs');
 
 //Path
-var path = require ('path');
+var path = require('path');
 
 //View engine
-app.engine('.hbs', expressHbs({defaultLayout:'layout',extname:'.hbs', runtimeOptions: {
-    allowProtoPropertiesByDefault: true,
-    allowProtoMethodsByDefault: true
-  }}));
-  
+app.engine('.hbs', expressHbs({
+    defaultLayout: 'layout', extname: '.hbs', runtimeOptions: {
+        allowProtoPropertiesByDefault: true,
+        allowProtoMethodsByDefault: true
+    }
+}));
+
 app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, 'public')));
-app.set("view engine", ".hbs");  
+app.set("view engine", ".hbs");
 
 //Ambiente
 let env = process.env.NODE_ENV;
@@ -61,11 +63,14 @@ console.log("env: " + env);
 
 //Leitura do arquivo YAML com o domínio 
 try {
-    let fileContents = fs.readFileSync('./src/resources/' + env + '.yaml', 'utf8');    
-    data = yaml.safeLoad(fileContents);    
+    let fileContents = fs.readFileSync('./src/resources/' + env + '.yaml', 'utf8');
+    data = yaml.safeLoad(fileContents);
+    if(env === "production"){
+        data = {...data, ...process.env};
+    }   
 } catch (e) {
     console.log(e);
 }
 
-console.log('Iniciando aplicação porta: '+ (data['port']));
-app.listen(data['port']);
+console.log('Iniciando aplicação porta: ' + (data['PORT']));
+app.listen(data['PORT']);
