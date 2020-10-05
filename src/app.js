@@ -27,18 +27,8 @@ app.use(session({
     cookie: { maxAge: 180 * 60 * 1000 }
 }));
 
-// app.use(function(req, res, next){
-//     res.locals.session = req.session;
-//     next();
-// });
-
-//Flash
-// app.use(flash());
-
 //JSON
 app.use(express.json());
-
-// app.use(express.static('public'));
 
 //Routes
 app.use('/livros', livrosRoutes);
@@ -68,6 +58,7 @@ let env = process.env.NODE_ENV;
 env = env == undefined ? 'dev' : env;
 let data;
 console.log("env: " + env);
+
 //Leitura do arquivo YAML com o domínio 
 try {
     let fileContents = fs.readFileSync('./src/resources/' + env + '.yaml', 'utf8');    
