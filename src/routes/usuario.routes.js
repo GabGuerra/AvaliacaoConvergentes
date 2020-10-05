@@ -13,5 +13,6 @@ const upload = multer({ storage });
 
 usuarioRouter.get('/Inicio', usuarioController.Inicio);
 usuarioRouter.post('/UploadArquivo',upload.single('file'), usuarioController.UploadArquivo);
+usuarioRouter.get('/DownloadArquivo', usuarioController.DownloadArquivo);
 
 module.exports = usuarioRouter;

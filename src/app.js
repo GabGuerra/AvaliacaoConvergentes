@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const livrosRoutes = require('./routes/livros.routes');
 const indexRoute = require('./routes/index.routes');
 const usuarioRoute = require('./routes/usuario.routes');
+const carrinhoRoute = require('./routes/carrinho.routes');
 const expressHbs = require('express-handlebars');
 const session = require('express-session');
 const MongoStore = require('connect-mongo')(session);
@@ -43,6 +44,7 @@ app.use(express.json());
 app.use('/livros', livrosRoutes);
 app.use('/', indexRoute);
 app.use('/Usuario', usuarioRoute);
+app.use('/Carrinho', carrinhoRoute);
 
 //Configs
 const yaml = require('js-yaml');

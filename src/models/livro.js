@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const livrosRouter = require('../routes/livros.routes');
 
 const { Schema } = mongoose;
 
