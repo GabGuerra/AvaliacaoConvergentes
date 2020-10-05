@@ -1,0 +1,25 @@
+{{#each livros}}
+    <div class="row">
+    {{#each this }}        
+    <div class="card" style="width: 20rem;">        
+        <img class="card-img-top img-responsive"
+            src="{{this.CaminhoImagem}}"
+            alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">{{this.NomeLivro}}</h5>
+            <p class="card-text description">{{this.Descricao}}</p>
+            <div>
+                <div class="price">R${{this.Preco}},00</div>
+                <a href="/adicionarAoCarrinho/{{this.sku}}" class="btn btn-success">Adicionar ao carrinho</a>
+                <a href="#" class="btn btn-primary">Baixar imagem</a>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>
+{{/each}}
+<style>
+    img {
+    max-height: 300px;
+}
+</style>

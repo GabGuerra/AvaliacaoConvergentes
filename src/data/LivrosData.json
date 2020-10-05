@@ -1,0 +1,30 @@
+[
+    {
+        "NomeLivro": "Clean code",
+        "Autor": "Robert C. Martin",
+        "DataPublicacao": "01/08/2008",
+        "Preco":"350,00",
+        "SKU": "LVRCM0108200835000"
+    },
+    {
+        "NomeLivro": "Domain Driven Design",
+        "Autor": "Eric Evans",
+        "DataPublicacao": "01/05/2003",
+        "Preco":"150,00",
+        "SKU":"DDDEE010520031500"
+    },
+    {
+        "NomeLivro": "Padrões de Arquitetura de Aplicações Corporativas",
+        "Autor": "Martin Fowler",
+        "DataPublicacao": "05/11/2002",
+        "Preco":"200,00",
+        "SKU":"PAACMF0511200220000"
+    },
+    {
+        "NomeLivro": "Refatoração - Aperfeiçoando o Projeto de Código Existente (Refactoring)",
+        "Autor": "Martin Fowler",
+        "DataPublicacao": "01/01/1999",
+        "Preco":"200,00",
+        "SKU":"RAPCEMF0101199920000"
+    }
+]
