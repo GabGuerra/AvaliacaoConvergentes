@@ -14,7 +14,7 @@ app.use(cors());
 
 //Conecta ao BD.
 mongoose.connect('mongodb://127.0.0.1:27017/biblioteca', { useNewUrlParser: true, useUnifiedTopology: true }, () =>
-    console.log('Banco conectado!')
+    console.log('Banco conectado!!')
 );
 
 //Session
