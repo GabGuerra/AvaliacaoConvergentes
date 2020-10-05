@@ -6,9 +6,11 @@ const usuarioRoute = require('./routes/usuario.routes');
 const expressHbs = require('express-handlebars');
 const session = require('express-session');
 const MongoStore = require('connect-mongo')(session);
-
+const cors = require("cors")
 const app = express();
 
+//Cors
+app.use(cors());
 
 //Conecta ao BD.
 mongoose.connect('mongodb://127.0.0.1:27017/biblioteca', { useNewUrlParser: true, useUnifiedTopology: true }, () =>
