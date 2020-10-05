@@ -6,7 +6,7 @@ const usuarioRoute = require('./routes/usuario.routes');
 const expressHbs = require('express-handlebars');
 const session = require('express-session');
 const MongoStore = require('connect-mongo')(session);
-const cors = require("cors")
+const cors = require("cors");
 const app = express();
 
 //Cors
