@@ -67,7 +67,7 @@ app.set("view engine", ".hbs");
 let env = process.env.NODE_ENV;
 env = env == undefined ? 'dev' : env;
 let data;
-
+console.log("env: " + env);
 //Leitura do arquivo YAML com o domínio 
 try {
     let fileContents = fs.readFileSync('./src/resources/' + env + '.yaml', 'utf8');    

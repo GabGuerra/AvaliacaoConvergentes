@@ -24,7 +24,8 @@
     "handlebars": "4.5.3"
   },
   "scripts": {
-    "dev": "nodemon src/app.js"
+    "dev": "nodemon src/app.js",
+    "start": "node src/app.js"
   },
   "keywords": [],
   "author": "",
